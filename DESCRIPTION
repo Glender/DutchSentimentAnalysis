@@ -1,0 +1,33 @@
+Package: DutchSentimentAnalysis
+Title: A package for dutch sentiment analyses
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Glenn Hiemstra",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "glenn.hiemstra@gmail.com")
+Description: A package for dutch sentiment analyses.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
+Imports: 
+    stringr,
+    dplyr,
+    tidyr,
+    tidytext,
+    tm,
+    vwr,
+    purrr,
+    tibble,
+    car,
+    magrittr,
+    stringdist,
+    badger,
+    rlang
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

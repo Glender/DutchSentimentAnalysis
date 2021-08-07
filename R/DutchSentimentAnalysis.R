@@ -1,0 +1,25 @@
+#' DutchSentimentAnalysis: A package for performing dutch sentiment analyses.
+#'
+#'The sentiment analysis is conducted by using a dutch sentiment dictionary that
+#'contains of +5000 classified words. Pattern matching with the classified words
+#'in the dictionary is performed by computing similarity indices and also takes negation
+#'into account ('niet leuk', 'geen charme').
+#'
+#'The function scores textual input on a scale from -2 to 2, where negative/positive
+#' scores indicate negative/positive sentiment.
+#'
+#' @section Sentiment analysis:
+#'\code{\link[DutchSentimentAnalysis]{dutch_sentiment_analysis}} \cr
+#'
+#' @section Dutch Sentiment Dictionary:
+#'\code{\link[DutchSentimentAnalysis]{dutch_sentiment_dictionary}} \cr
+#'If you want to lookup a word in the dictionary use:
+#'\code{\link[DutchSentimentAnalysis]{get_word_sentiment}} \cr
+#'
+#' @section Validation data:
+#'\code{\link[DutchSentimentAnalysis]{product_reviews}} \cr
+#'
+#' @docType package
+#' @name DutchSentimentAnalysis
+NULL
+#> NULL

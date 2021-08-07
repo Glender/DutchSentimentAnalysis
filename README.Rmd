@@ -1,0 +1,116 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Dutch Sentiment Analysis
+
+```{r, echo = FALSE, results='asis'}
+cat(
+	badger::badge_devel("Glender/DutchSentimentAnalysis", "purple"),
+	badger::badge_codefactor("rossellhayes/ipa"),
+	badger::badge_lifecycle("maturing", "blue"),
+	badger::badge_github_actions("rossellhayes/ipa"),
+	badger::badge_codecov("rcannood/princurve"),
+	badger::badge_code_size("Glender/DutchSentimentAnalysis")
+)
+```
+
+Unfortunately there aren't many R-packages that implement sentiment analysis for the dutch language. The DutchSentimentAnalysis package fills this void. It is easily installable via Github and provides easy to use functions, exemplary data, and comprehensive documentation.     
+The sentiment analyses are performed by a classification algorithm that uses a dutch sentiment dictionary to quantify attitudes and opinions. The sentiment dictionary contains 5190 words that are classified on a scale from -2 to 2, where positive/negative scores indicate positive/negative emotional value.   
+
+The emotional classification algorithm evaluates the similarity between textual input and words occuring in the dictionary and rates text on sentimental value. It intelligently takes negation into account (e.g. 'niet goed') and has high predictive validity.    
+
+## :writing_hand: Author
+
+Name: Glenn Hiemstra
+Email: Glenn.Hiemstra@gmail.com
+
+<https://github.com/glender>
+
+## :arrow_double_down: Installation
+
+```r
+# Install the cutting edge development version from GitHub:
+# install.packages("devtools")
+devtools::install_github("Glender/DutchSentimentAnalysis")
+```
+
+## :book: Usage
+
+```{r}
+library(DutchSentimentAnalysis)
+library(tibble)
+
+# create vector with character data
+text <- c(
+ "Ik vond de film matig",
+ "De acteurs waren niet slecht",
+ "Maar het script was allesbehalve goed",
+ "Die kende geen spanning",
+ "Zoals je van Tarantino verwacht was het plot fantastisch",
+ "Gelukkig waren de bioscoopkaarten goedkoop"
+)
+
+# use the function
+dutch_sentiment_analysis(text)
+
+# or put the results in a dataframe
+tibble(
+ lines = text,
+ scores = dutch_sentiment_analysis(text),
+ label = dutch_sentiment_analysis(text, output = "label")
+)
+```
+
+## :floppy_disk: Data
+
+If you want to find the sentiment scores of a single word, you can do the following:
+
+```{r example}
+# write some words that you want to lookup
+words <- c("goed", "slecht", "lekker")
+get_word_sentiment(words)
+
+# You can also consult the dictionary itself with:
+tail(dutch_sentiment_dictionary)
+```
+
+## :telescope: Validation
+
+To illustrate that the dutch sentiment analysis enjoys strong predictive validity, we show that sentiment scores correlate strongly with related measurements. For that purpose we analyze a dataset containing product reviews of earphones. Besides the users opinion of the earphones, reviewers also provided their feedback in the form of a 5-star rating. If our sentiment analysis has predictive value, the scores of the sentiment analysis on the product review should correlate with the results of the 5-star rating. Let's find out. 
+
+```{r example2}
+# look at the data
+head(product_reviews)
+
+# compute sentiment scores
+sentiment_scores <- dutch_sentiment_analysis(product_reviews$Product_review)
+
+# test predictive validity
+cor.test(sentiment_scores, product_reviews$Star_rating)
+
+# or get the estimates with a lineair model
+model <- lm(product_reviews$Star_rating ~ sentiment_scores)
+summary(model$coefficients)
+```
+
+These results show the strong predictive validity (r = .8, p < .0001) of the dutch sentiment analyses. On average, for each unit increase in sentiment scores of the users product review, the scores of the 5-star rating also increase by one. This is sufficient evidence that the emotional classification algorithm works.    
+
+## :speech_balloon: Help
+
+The documentation of all functions can be accessed by `?<function-name>` or navigate via the package documentation help page `?DutchSentimentAnalysis` or help("DutchSentimentAnalysis").
+```
+# For example:
+?dutch_sentiment_analysis
+```
