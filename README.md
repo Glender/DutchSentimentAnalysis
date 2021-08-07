@@ -28,7 +28,8 @@ sentimental value. It intelligently takes negation into account (e.g.
 
 ## :writing\_hand: Author
 
-Name: Glenn Hiemstra Email: <Glenn.Hiemstra@gmail.com>
+Name: Glenn Hiemstra 
+Email: <Glenn.Hiemstra@gmail.com>
 
 <https://github.com/glender>
 
@@ -78,7 +79,7 @@ tibble(
 #> 6 Gelukkig waren de bioscoopkaarten goedkoop                  0.5 positive
 ```
 
-## :floppy\_disk: Data
+## :floppy\_disk: Consulting the Sentiment Dictionary
 
 If you want to find the sentiment scores of a single word, you can do
 the following:
