@@ -109,8 +109,9 @@ These results show the strong predictive validity (r = .8, p < .0001) of the dut
 
 ## :speech_balloon: Help
 
-The documentation of all functions can be accessed by `?<function-name>` or navigate via the package documentation help page `?DutchSentimentAnalysis` or help("DutchSentimentAnalysis").
+The documentation of all functions can be accessed by `?<function-name>` or navigate via the package documentation help page `?DutchSentimentAnalysis` or `help("DutchSentimentAnalysis")`.
 ```
 # For example:
 ?dutch_sentiment_analysis
+help("DutchSentimentAnalysis")
 ```

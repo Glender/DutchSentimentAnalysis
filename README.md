@@ -3,6 +3,8 @@
 
 # Dutch Sentiment Analysis
 
+    #> ✓ Setting active project to '/home/glenn/Documents/Github/DutchSentimentAnalysis'
+
 [![](https://img.shields.io/badge/devel%20version-0.0.0.9000-purple.svg)](https://github.com/Glender/DutchSentimentAnalysis)
 [![CodeFactor](https://www.codefactor.io/repository/github/rossellhayes/ipa/badge)](https://www.codefactor.io/repository/github/rossellhayes/ipa)
 [![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
@@ -160,7 +162,8 @@ emotional classification algorithm works.
 
 The documentation of all functions can be accessed by `?<function-name>`
 or navigate via the package documentation help page
-`?DutchSentimentAnalysis` or help(“DutchSentimentAnalysis”).
+`?DutchSentimentAnalysis` or `help("DutchSentimentAnalysis")`.
 
     # For example:
     ?dutch_sentiment_analysis
+    help("DutchSentimentAnalysis")
