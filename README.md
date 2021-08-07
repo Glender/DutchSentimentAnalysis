@@ -3,6 +3,8 @@
 
 # Dutch Sentiment Analysis
 
+    #> ✓ Setting active project to '/home/glenn/Documents/Github/DutchSentimentAnalysis'
+
 [![](https://img.shields.io/badge/devel%20version-0.0.0.9000-purple.svg)](https://github.com/Glender/DutchSentimentAnalysis)
 [![CodeFactor](https://www.codefactor.io/repository/github/rossellhayes/ipa/badge)](https://www.codefactor.io/repository/github/rossellhayes/ipa)
 [![](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#maturing)
@@ -14,7 +16,8 @@ status](https://github.com/rossellhayes/ipa/workflows/R-CMD-check/badge.svg)](ht
 Unfortunately there aren’t many R-packages that implement sentiment
 analysis for the dutch language. The DutchSentimentAnalysis package
 fills this void. It is easily installable via Github and provides easy
-to use functions, exemplary data, and comprehensive documentation.  
+to use functions, exemplary data, and comprehensive documentation.
+
 The sentiment analyses are performed by a classification algorithm that
 uses a dutch sentiment dictionary to quantify attitudes and opinions.
 The sentiment dictionary contains 5190 words that are classified on a
@@ -28,7 +31,8 @@ sentimental value. It intelligently takes negation into account (e.g.
 
 ## :writing\_hand: Author
 
-Name: Glenn Hiemstra 
+Name: Glenn Hiemstra
+
 Email: <Glenn.Hiemstra@gmail.com>
 
 <https://github.com/glender>
@@ -79,7 +83,7 @@ tibble(
 #> 6 Gelukkig waren de bioscoopkaarten goedkoop                  0.5 positive
 ```
 
-## :floppy\_disk: Consulting the Sentiment Dictionary
+## :floppy\_disk: Data
 
 If you want to find the sentiment scores of a single word, you can do
 the following:
