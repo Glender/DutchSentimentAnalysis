@@ -40,7 +40,7 @@ Email: <Glenn.Hiemstra@gmail.com>
 ``` r
 # Install the cutting edge development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("Glender/DutchSentimentAnalysis")
+devtools::install_github("Glender/DutchSentimentAnalysis", ref="main")
 ```
 
 ## :book: Usage
