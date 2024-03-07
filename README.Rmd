@@ -43,10 +43,10 @@ Email: Glenn.Hiemstra@gmail.com
 ## :arrow_double_down: Installation
 
 ```r
-# Install the specific version from a URL
+# Install the external package 'vwr' since it is not available on CRAN
 remotes::install_url("https://raw.githubusercontent.com/Glender/DutchSentimentAnalysis/main/inst/script/vwr_0.3.0.tar.gz")
 
-# assure stringr is the correct version
+# assure stringr is the correct pkg version
 devtools::install_version("stringr", version = "1.4.0", repos = "http://cran.us.r-project.org")
 
 # Install the cutting edge development version from GitHub:
