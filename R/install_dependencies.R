@@ -1,4 +1,10 @@
-#.onAttach <- function(libname, pkgname) {
-#
-#}
+.onAttach <- function(libname, pkgname) {
+  # Install the remotes package if you haven't already
+  if (!requireNamespace("remotes", quietly = TRUE)) {
+    install.packages("remotes")
+  }
+
+  # Install the specific version from a URL
+  remotes::install_url("https://raw.githubusercontent.com/Glender/DutchSentimentAnalysis/main/inst/script/vwr_0.3.0.tar.gz")
+}
 
