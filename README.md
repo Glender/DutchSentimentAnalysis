@@ -38,9 +38,15 @@ Email: <Glenn.Hiemstra@gmail.com>
 ## :arrow\_double\_down: Installation
 
 ``` r
+# Install the specific version from a URL
+remotes::install_url("https://raw.githubusercontent.com/Glender/DutchSentimentAnalysis/main/inst/script/vwr_0.3.0.tar.gz")
+
+# assure stringr is the correct version
+devtools::install_version("stringr", version = "1.4.0", repos = "http://cran.us.r-project.org")
+
 # Install the cutting edge development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("Glender/DutchSentimentAnalysis", ref="main")
+devtools::install_github("Glender/DutchSentimentAnalysis")
 ```
 
 ## :book: Usage
