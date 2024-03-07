@@ -21,6 +21,7 @@ Imports:
     tidytext,
     tm,
     vwr,
+    devtools,
     purrr,
     tibble (== 3.1.2),
     car,
